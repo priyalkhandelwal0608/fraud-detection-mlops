@@ -14,6 +14,16 @@ def preprocess_data(df):
         "fraud_type", "ip_address", "device_hash"
     ], errors="ignore")
 
+    # --- FIX: Clean target column before casting ---
+    # Fill missing values with "False"
+    df["is_fraud"] = df["is_fraud"].fillna("False")
+
+    # Map True/False strings to integers
+    df["is_fraud"] = df["is_fraud"].map({"True": 1, "False": 0})
+
+    # If any unmapped values remain, fill them with 0
+    df["is_fraud"] = df["is_fraud"].fillna(0).astype(int)
+
     # Encode categorical columns
     categorical_cols = [
         "transaction_type", "merchant_category", "location",
@@ -33,7 +43,7 @@ def preprocess_data(df):
 
     # Features and target
     x = df.drop("is_fraud", axis=1)
-    y = df["is_fraud"].astype(int)
+    y = df["is_fraud"]
 
     # Scale numeric features
     scaler = StandardScaler()
