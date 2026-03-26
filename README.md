@@ -39,7 +39,7 @@ This project implements a **real‑time fraud detection system** using machine l
 ---
 ## Installation and run 
 - pip install -r requirements.txt
--python -m pipelines.training_pipeline
+- python -m pipelines.training_pipeline
 - uvicorn api.app:app --reload
 ---
 
