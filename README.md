@@ -31,9 +31,6 @@ This project implements a **real‑time fraud detection system** using machine l
 * **Uvicorn**: Lightning-fast ASGI server implementation to host the application.
 * **Jinja2**: Template engine used to render the styled HTML fraud-detection dashboard.
 
-### MLOps & Deployment
-* **MLflow**: Robust platform for experiment tracking, model versioning, and lifecycle management.
-* **Docker**: Containerization tool to ensure the app runs identically in development and production.
 
 ---
 ## Installation and run 
@@ -44,13 +41,11 @@ This project implements a **real‑time fraud detection system** using machine l
 
 ##  Project Structure
 ```text
-FRAUD-DETECTION-MLOPS/
+FRAUD-DETECTION/
 ├── api/
 │   └── app.py               # FastAPI server & Web UI
 ├── data/
 │   └── transactions.csv     # Raw transaction dataset
-├── docker/
-│   └── Dockerfile           # Containerization instructions
 ├── models/                  # Saved .pkl artifacts (model, scaler)
 ├── monitoring/              # Scripts for drift and performance checks
 ├── pipelines/
@@ -59,5 +54,4 @@ FRAUD-DETECTION-MLOPS/
 │   ├── data_processing.py   # Cleaning & Feature Engineering
 │   ├── model.py             # Model architecture
 │   └── train_model.py       # Training logic
-├── mlflow.db                # MLflow experiment database
 └── requirements.txt         # Project dependencies
