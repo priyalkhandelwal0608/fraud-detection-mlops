@@ -17,22 +17,22 @@ This project implements a **real‑time fraud detection system** using machine l
 
 ##  Technologies Used
 
-### ** Core Language & Environment**
+###  Core Language & Environment
 * **Python 3.11+**: High-level programming language for all logic and scripting.
 * **Python-dotenv**: Manages environment variables for secure configuration (API keys, DB paths).
 
-### ** Machine Learning & Data Science**
+### Machine Learning & Data Science
 * **XGBoost**: Gradient boosted decision trees for high-performance classification.
 * **Scikit-learn**: Used for data splitting, scaling, and evaluation metrics.
 * **Pandas & NumPy**: Essential libraries for high-speed data manipulation and numerical processing.
 * **Joblib**: Efficient serialization for saving and loading trained models and scalers.
 
-### ** API & Web Interface**
+###  API & Web Interface
 * **FastAPI**: Modern, high-performance web framework for building the prediction service.
 * **Uvicorn**: Lightning-fast ASGI server implementation to host the application.
 * **Jinja2**: Template engine used to render the styled HTML fraud-detection dashboard.
 
-### ** MLOps & Deployment**
+### MLOps & Deployment
 * **MLflow**: Robust platform for experiment tracking, model versioning, and lifecycle management.
 * **Docker**: Containerization tool to ensure the app runs identically in development and production.
 
