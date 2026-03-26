@@ -13,3 +13,24 @@ This project implements a **real‑time fraud detection system** using machine l
 - Modular, reproducible pipeline ready for deployment  
 
 ---
+
+
+##  Project Structure
+```text
+FRAUD-DETECTION-MLOPS/
+├── api/
+│   └── app.py               # FastAPI server & Web UI
+├── data/
+│   └── transactions.csv     # Raw transaction dataset
+├── docker/
+│   └── Dockerfile           # Containerization instructions
+├── models/                  # Saved .pkl artifacts (model, scaler)
+├── monitoring/              # Scripts for drift and performance checks
+├── pipelines/
+│   └── training_pipeline.py # Orchestrates the full training flow
+├── src/                     # Core logic modules
+│   ├── data_processing.py   # Cleaning & Feature Engineering
+│   ├── model.py             # Model architecture
+│   └── train_model.py       # Training logic
+├── mlflow.db                # MLflow experiment database
+└── requirements.txt         # Project dependencies
